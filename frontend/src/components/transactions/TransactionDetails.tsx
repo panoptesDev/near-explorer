@@ -122,7 +122,7 @@ class TransactionDetails extends React.Component<Props, State> {
           <DatabaseConsumer>
             {(context) => (
               <div className="transaction-info-container">
-                <Row noGutters>
+                <Row noGutters className="header-row">
                   <Col md="5">
                     <CardCell
                       title={
@@ -368,9 +368,7 @@ class TransactionDetails extends React.Component<Props, State> {
                     border-bottom: 0;
                   }
 
-                  .transaction-info-container
-                    > .row:first-of-type
-                    .card-cell-text {
+                  .transaction-info-container .header-row .card-cell-text {
                     font-size: 24px;
                   }
 

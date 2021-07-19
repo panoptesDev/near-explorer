@@ -2,10 +2,10 @@
 
 exports[`<TransactionDetails /> renders no deposit 1`] = `
 <div
-  className="jsx-2925423050 transaction-info-container"
+  className="jsx-3516519872 transaction-info-container"
 >
   <div
-    className="row no-gutters"
+    className="header-row row no-gutters"
   >
     <div
       className="col-md-5"
@@ -144,7 +144,7 @@ exports[`<TransactionDetails /> renders no deposit 1`] = `
               className="ml-auto card-cell-text align-self-center col-md-12 col-auto"
             >
               <div
-                className="jsx-2925423050"
+                className="jsx-3516519872"
                 style={
                   Object {
                     "fontSize": "21px",
@@ -474,10 +474,10 @@ exports[`<TransactionDetails /> renders no deposit 1`] = `
 
 exports[`<TransactionDetails /> renders with one small deposit 1`] = `
 <div
-  className="jsx-2925423050 transaction-info-container"
+  className="jsx-3516519872 transaction-info-container"
 >
   <div
-    className="row no-gutters"
+    className="header-row row no-gutters"
   >
     <div
       className="col-md-5"
@@ -616,7 +616,7 @@ exports[`<TransactionDetails /> renders with one small deposit 1`] = `
               className="ml-auto card-cell-text align-self-center col-md-12 col-auto"
             >
               <div
-                className="jsx-2925423050"
+                className="jsx-3516519872"
                 style={
                   Object {
                     "fontSize": "21px",
@@ -946,10 +946,10 @@ exports[`<TransactionDetails /> renders with one small deposit 1`] = `
 
 exports[`<TransactionDetails /> renders with two big deposit 1`] = `
 <div
-  className="jsx-2925423050 transaction-info-container"
+  className="jsx-3516519872 transaction-info-container"
 >
   <div
-    className="row no-gutters"
+    className="header-row row no-gutters"
   >
     <div
       className="col-md-5"
@@ -1088,7 +1088,7 @@ exports[`<TransactionDetails /> renders with two big deposit 1`] = `
               className="ml-auto card-cell-text align-self-center col-md-12 col-auto"
             >
               <div
-                className="jsx-2925423050"
+                className="jsx-3516519872"
                 style={
                   Object {
                     "fontSize": "21px",
