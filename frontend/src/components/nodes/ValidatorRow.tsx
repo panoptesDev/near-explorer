@@ -114,7 +114,7 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                           src="/static/images/icon-minimize.svg"
                           style={{ width: "16px" }}
                         />
-                        ) : (
+                      ) : (
                         <img
                           src="/static/images/icon-maximize.svg"
                           style={{ width: "16px" }}
@@ -124,7 +124,9 @@ class ValidatorRow extends React.PureComponent<Props, State> {
 
                     <td className="order">{index}</td>
                     <td className="country-flag">
-                      <CountryFlag countryCode={node.poolDetails?.country_code} />
+                      <CountryFlag
+                        countryCode={node.poolDetails?.country_code}
+                      />
                     </td>
 
                     <td>
@@ -137,7 +139,7 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                                 "component.nodes.ValidatorRow.state.pending.text"
                               ).toString()}
                               tooltipKey="nodes"
-                              >
+                            >
                               {translate(
                                 "component.nodes.ValidatorRow.state.pending.title"
                               )}
@@ -227,7 +229,10 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                             ) : (
                               <>
                                 {stakeProposed.increace ? "+" : "-"}
-                                <Balance amount={stakeProposed.value} label="NEAR" />
+                                <Balance
+                                  amount={stakeProposed.value}
+                                  label="NEAR"
+                                />
                               </>
                             )}
                           </small>
@@ -251,40 +256,41 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                     <td colSpan={cellCount}>
                       {nodeProduceBlocks && node.nodeInfo && (
                         <Row noGutters className="validator-nodes-content-row">
-                          {node.num_produced_blocks && node.num_expected_blocks && (
-                            <Col className="validator-nodes-content-cell">
-                              <Row noGutters>
-                                <Col className="validator-nodes-details-title">
-                                  <Term
-                                    title={"Uptime"}
-                                    text={
-                                      "Uptime is estimated by the ratio of the number of produced blocks to the number of expected blocks"
-                                    }
-                                    href="https://nomicon.io/Economics/README.html#rewards-calculation"
-                                  />
-                                </Col>
-                              </Row>
-                              <Row noGutters>
-                                <Col className="validator-nodes-text uptime">
-                                  {node.num_produced_blocks &&
-                                  node.num_expected_blocks ? (
-                                    <>
-                                      {(
-                                        (node.num_produced_blocks /
-                                          node.num_expected_blocks) *
-                                        100
-                                      ).toFixed(3)}
-                                      % &nbsp;
-                                      <span>
-                                        ({node.num_produced_blocks}/
-                                        {node.num_expected_blocks})
-                                      </span>
-                                    </>
-                                  ) : null}
-                                </Col>
-                              </Row>
-                            </Col>
-                          )}
+                          {node.num_produced_blocks &&
+                            node.num_expected_blocks && (
+                              <Col className="validator-nodes-content-cell">
+                                <Row noGutters>
+                                  <Col className="validator-nodes-details-title">
+                                    <Term
+                                      title={"Uptime"}
+                                      text={
+                                        "Uptime is estimated by the ratio of the number of produced blocks to the number of expected blocks"
+                                      }
+                                      href="https://nomicon.io/Economics/README.html#rewards-calculation"
+                                    />
+                                  </Col>
+                                </Row>
+                                <Row noGutters>
+                                  <Col className="validator-nodes-text uptime">
+                                    {node.num_produced_blocks &&
+                                    node.num_expected_blocks ? (
+                                      <>
+                                        {(
+                                          (node.num_produced_blocks /
+                                            node.num_expected_blocks) *
+                                          100
+                                        ).toFixed(3)}
+                                        % &nbsp;
+                                        <span>
+                                          ({node.num_produced_blocks}/
+                                          {node.num_expected_blocks})
+                                        </span>
+                                      </>
+                                    ) : null}
+                                  </Col>
+                                </Row>
+                              </Col>
+                            )}
                           {node.nodeInfo && (
                             <Col className="validator-nodes-content-cell">
                               <Row noGutters>
@@ -404,7 +410,7 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                                   </Col>
                                 </Row>
                               </Col>
-                          )}
+                            )}
                         </Row>
                       )}
 
@@ -412,7 +418,10 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                         {node?.poolDetails && poolDetailsAvailable ? (
                           <>
                             {node.poolDetails.url && (
-                              <Col className="validator-nodes-content-cell" xs="auto">
+                              <Col
+                                className="validator-nodes-content-cell"
+                                xs="auto"
+                              >
                                 <Row noGutters>
                                   <Col className="validator-nodes-details-title">
                                     Web
@@ -431,7 +440,10 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                               </Col>
                             )}
                             {node.poolDetails.email && (
-                              <Col className="validator-nodes-content-cell" xs="auto">
+                              <Col
+                                className="validator-nodes-content-cell"
+                                xs="auto"
+                              >
                                 <Row noGutters>
                                   <Col className="validator-nodes-details-title">
                                     Email
@@ -439,7 +451,9 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                                 </Row>
                                 <Row noGutters>
                                   <Col className="validator-nodes-text">
-                                    <a href={`mailto:${node.poolDetails.email}`}>
+                                    <a
+                                      href={`mailto:${node.poolDetails.email}`}
+                                    >
                                       {node.poolDetails.email}
                                     </a>
                                   </Col>
@@ -447,7 +461,10 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                               </Col>
                             )}
                             {node.poolDetails.twitter && (
-                              <Col className="validator-nodes-content-cell" xs="auto">
+                              <Col
+                                className="validator-nodes-content-cell"
+                                xs="auto"
+                              >
                                 <Row noGutters>
                                   <Col className="validator-nodes-details-title">
                                     Twitter
@@ -466,7 +483,10 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                               </Col>
                             )}
                             {node.poolDetails.discord && (
-                              <Col className="validator-nodes-content-cell" xs="auto">
+                              <Col
+                                className="validator-nodes-content-cell"
+                                xs="auto"
+                              >
                                 <Row noGutters>
                                   <Col className="validator-nodes-details-title">
                                     Discord
@@ -493,7 +513,9 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                                 </Row>
                                 <Row noGutters>
                                   <Col className="validator-nodes-text">
-                                    <small>{node.poolDetails.description}</small>
+                                    <small>
+                                      {node.poolDetails.description}
+                                    </small>
                                   </Col>
                                 </Row>
                               </Col>
@@ -519,9 +541,12 @@ class ValidatorRow extends React.PureComponent<Props, State> {
 
                   {node?.cumulativeStakeAmount && node?.networkHolder && (
                     <tr className="cumulative-stake-holders-row">
-                      <td colSpan={cellCount} className="warning-text text-center">
+                      <td
+                        colSpan={cellCount}
+                        className="warning-text text-center"
+                      >
                         {translate("component.nodes.ValidatorRow.warning_tip", {
-                          node_tip_max: index
+                          node_tip_max: index,
                         })}
                       </td>
                     </tr>
@@ -581,7 +606,8 @@ class ValidatorRow extends React.PureComponent<Props, State> {
                       padding-bottom: 16px;
                     }
 
-                    .validator-nodes-content-row > .validator-nodes-content-cell {
+                    .validator-nodes-content-row
+                      > .validator-nodes-content-cell {
                       padding: 0 22px;
                       border-right: 1px solid #e5e5e6;
                     }
@@ -627,6 +653,5 @@ class ValidatorRow extends React.PureComponent<Props, State> {
     );
   }
 }
-
 
 export default ValidatorRow;
