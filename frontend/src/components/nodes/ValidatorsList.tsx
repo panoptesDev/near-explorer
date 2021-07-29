@@ -1,5 +1,5 @@
 import BN from "bn.js";
-import React from "react";
+import { PureComponent } from "react";
 
 import * as N from "../../libraries/explorer-wamp/nodes";
 
@@ -12,7 +12,7 @@ interface Props {
   validatorType: string;
 }
 
-class ValidatorsList extends React.PureComponent<Props> {
+class ValidatorsList extends PureComponent<Props> {
   calculateStake = (nodeIndex: number, totalStake: BN) => {
     let total = new BN(0);
     let networkHolderIndex = [];

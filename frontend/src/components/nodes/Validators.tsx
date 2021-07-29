@@ -1,4 +1,4 @@
-import React from "react";
+import { PureComponent } from "react";
 
 import { NodeConsumer } from "../../context/NodeProvider";
 
@@ -15,7 +15,7 @@ interface Props {
   itemsPerPage: number;
 }
 
-class Validators extends React.PureComponent<Props> {
+class Validators extends PureComponent<Props> {
   static defaultProps = {
     itemsPerPage: 120,
   };

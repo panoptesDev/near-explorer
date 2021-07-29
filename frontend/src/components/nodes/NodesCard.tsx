@@ -1,6 +1,6 @@
 import BN from "bn.js";
 
-import React from "react";
+import { PureComponent } from "react";
 import { Col, Row, OverlayTrigger, Tooltip, Spinner } from "react-bootstrap";
 
 import { utils } from "near-api-js";
@@ -54,7 +54,7 @@ const NodeBalance = ({
   );
 };
 
-class NodesCard extends React.PureComponent {
+class NodesCard extends PureComponent {
   render() {
     return (
       <Translate>

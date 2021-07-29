@@ -1,6 +1,6 @@
 import moment from "moment";
 
-import React from "react";
+import { Component } from "react";
 
 import { Row, Col } from "react-bootstrap";
 
@@ -21,7 +21,7 @@ export interface Props {
   currentNearNetwork: NearNetwork;
 }
 
-class AccountDetails extends React.Component<Props> {
+class AccountDetails extends Component<Props> {
   render() {
     const { account, currentNearNetwork } = this.props;
     return (

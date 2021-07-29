@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import React from "react";
+import { Component } from "react";
 
 import Mixpanel from "../../libraries/mixpanel";
 
@@ -17,7 +17,7 @@ import NetworkStatsProvider, {
   NetworkStatsConsumer,
 } from "../../context/NetworkStatsProvider";
 
-class ProposalsPage extends React.Component {
+class ProposalsPage extends Component {
   componentDidMount() {
     Mixpanel.track("Explorer View Proposal Node page");
   }

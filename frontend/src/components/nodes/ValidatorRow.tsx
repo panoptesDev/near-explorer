@@ -1,5 +1,5 @@
 import BN from "bn.js";
-import React from "react";
+import { PureComponent } from "react";
 
 import { Badge, Row, Col, Spinner } from "react-bootstrap";
 
@@ -25,7 +25,7 @@ interface State {
   activeRow: boolean;
 }
 
-class ValidatorRow extends React.PureComponent<Props, State> {
+class ValidatorRow extends PureComponent<Props, State> {
   state = {
     activeRow: false,
   };
